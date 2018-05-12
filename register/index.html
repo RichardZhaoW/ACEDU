@@ -1,0 +1,205 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script src="scriptaculous/lib/prototype.js" type="text/javascript"></script>
+<script src="scriptaculous/src/effects.js" type="text/javascript"></script>
+<script type="text/javascript" src="validation.js"></script>
+<script type="text/javascript">
+//<![CDATA[
+<!--
+// Alternative Style: Working With Alternate Style Sheets
+// http://www.alistapart.com/articles/alternate/
+function setActiveStyleSheet(title) {
+var i, a, main;
+for(i=0; (a = document.getElementsByTagName("link")[i]); i++) {
+if(a.getAttribute("rel").indexOf("style") != -1 && a.getAttribute("title")) {
+a.disabled = true;
+if(a.getAttribute("title") == title) a.disabled = false;
+}
+}
+}
+//-->
+//]]>
+</script>
+<link title="style1" rel="stylesheet" href="style.css" type="text/css" />
+<link title="style2" rel="alternate stylesheet" href="style2.css" type="text/css" />
+<link title="style3" rel="alternate stylesheet" href="style3.css" type="text/css" />
+</head>
+<body>
+    <div class="style_changer" hidden=true>
+    	<div class="style_changer_text">Themes:</div>
+        <input type="submit" value="1" onclick="setActiveStyleSheet('style1');" />
+        <input type="submit" value="2" onclick="setActiveStyleSheet('style2');" />
+        <input type="submit" value="3" onclick="setActiveStyleSheet('style3');" />
+    </div>
+
+	<div class="form_content">
+    <form id="test" action="#" method="get">
+    <fieldset>
+        <legend>基本信息</legend>
+        <div class="form-row">
+            <div class="field-label"><label for="field0">姓名</label>:</div>
+            <div class="field-widget"><input name="fullname" id="fullname" class="required" title="请输入姓名" /></div>
+        </div>
+        
+        <div class="form-row">
+            <div class="field-label"><label for="field1">性别</label>:</div>
+            <div class="field-widget"><input name="gender" id="gender" class="required" title="请输入性别" /></div>
+        </div>
+        
+        <div class="form-row">
+            <div class="field-label"><label for="field2">身份证号码</label>:</div>
+            <div class="field-widget"><input name="idcard" id="idcard" class="required validate-number" title="请输入身份证号码" /></div>
+        </div>
+
+        <div class="form-row">
+                <div class="field-label"><label for="field3">手机号码</label>:</div>
+                <div class="field-widget"><input name="mobile" id="mobile" class="required validate-number" title="请输入手机号码" /></div>
+            </div>
+        
+        
+    </fieldset>
+    <fieldset>
+            <legend>职业信息</legend>
+            <div class="form-row">
+                <div class="field-label"><label for="field10">学校</label>:</div>
+                <div class="field-widget"><input name="school" id="school" class="required" title="请输入学校" /></div>
+            </div>
+            
+            <div class="form-row">
+                <div class="field-label"><label for="field11">邮箱</label>:</div>
+                <div class="field-widget"><input name="email" id="email" class="required  validate-email" title="请输入邮箱" /></div>
+            </div>
+            
+            <div class="form-row">
+                <div class="field-label"><label for="field12">职务</label>:</div>
+                <div class="field-widget"><input name="level" id="level" class="required" title="请输入职务" /></div>
+            </div>
+    
+            <div class="form-row">
+                    <div class="field-label"><label for="field13">学科</label>:</div>
+                    <div class="field-widget"><input name="subject" id="subject" class="required" title="请输入学科" /></div>
+                </div>
+            
+            
+        </fieldset>
+        
+    <fieldset>
+        <legend>参会信息</legend>
+        
+        <div class="form-row">
+            <div class="field-label"><label for="field14">第几次参加年会</label>:</div>
+            <div class="field-widget">
+                    <select id="occurency" name="occurency" class="validate-selection" title="第几次参加年会">
+                        <option>请选择...</option>
+                        <option>第一次</option>
+                        <option>第二次</option>
+                        <option>第三次</option>
+                        <option>第四次</option>
+                        <option>第五次</option>
+                        <option>五次以上</option>
+                    </select>
+                </div>
+        </div>
+
+        <div class="form-row">
+                <div class="field-label"><label for="field15">参加活动种类</label>:</div>
+                <div class="field-widget">
+                        <select id="activityType" name="activityType" class="validate-selection" title="参加活动种类">
+                            <option>请选择...</option>
+                            <option>年会</option>
+                            <option>教师工作坊</option>
+                            <option>年会+教师工作坊</option>
+                        </select>
+                    </div>
+        </div>
+        <div class="form-row">
+                <div class="field-label"><label for="field16">是否同意安排午餐</label>:</div>
+                <div class="field-widget">
+                        <select id="isLunch" name="isLunch" class="validate-selection" title="是否同意安排午餐">
+                            <option>请选择...</option>
+                            <option>否</option>
+                            <option>是</option>
+                        </select>
+                    </div>
+        </div>
+
+        <div class="form-row">
+                <div class="field-label"><label for="field17">是否回族</label>:</div>
+                <div class="field-widget">
+                        <select id="isMoslem" name="isMoslem" class="validate-selection" title="是否穆斯林">
+                            <option>请选择...</option>
+                            <option>否</option>
+                            <option>是</option>
+                        </select>
+                    </div>
+        </div>
+
+        <div class="form-row">
+                <div class="field-label"><label for="field18">抵达日期</label>:</div>
+                <div class="field-widget">
+                        <select id="dateArrive" name="dateArrive" class="validate-selection" title="抵达日期">
+                            <option>请选择...</option>
+                            <option>2018-06-01之前</option>
+                            <option>2018-06-01</option>
+                            <option>2018-06-02</option>
+                            <option>2018-06-03</option>
+                            <option>2018-06-04</option>
+                            <option>2018-06-05</option>
+                        </select>
+                    </div>
+        </div>
+
+        <div class="form-row">
+                <div class="field-label"><label for="field18">离会日期</label>:</div>
+                <div class="field-widget">
+                        <select id="dateArrive" name="dateArrive" class="validate-selection" title="离会日期">
+                            <option>请选择...</option>
+                            <option>2018-06-05</option>
+                            <option>2018-06-06</option>
+                            <option>2018-06-07</option>
+                            <option>2018-06-08</option>
+                            <option>2018-06-09</option>
+                            <option>2018-06-09之后</option>
+                        </select>
+                    </div>
+        </div>
+
+        <div class="form-row">
+                <div class="field-label"><label for="field19">教师工作坊期间需要接送</label>?</div>
+                <div class="field-widget">
+                        <select id="isShuttle" name="isShuttle" class="validate-selection" title="是否接送">
+                            <option>请选择...</option>
+                            <option>否</option>
+                            <option>是</option>
+                        </select>
+                    </div>
+        </div>
+      
+    </fieldset>  
+    
+    <input type="submit" class="submit" value="提交" /> 
+    <input class="reset" type="button" value="重置" onclick="valid.reset(); return false" hidden=true/>
+    </form>
+    </div>
+    <script type="text/javascript">
+        function formCallback(result, form) {
+            window.status = "valiation callback for form '" + form.id + "': result = " + result;
+        }
+        
+        var valid = new Validation('test', {immediate : true, onFormValidate : formCallback});
+        Validation.addAllThese([
+            ['validate-password', '> 6 characters', {
+                minLength : 7,
+                notOneOf : ['password','PASSWORD','1234567','0123456'],
+                notEqualToField : 'field1'
+            }],
+            ['validate-password-confirm', 'please try again.', {
+                equalToField : 'field8'
+            }]
+        ]);
+    </script>
+
+</body>
+</html>
