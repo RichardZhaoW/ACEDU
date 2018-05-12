@@ -67,33 +67,46 @@ jQuery(document).ready(function($) {
 
 				<ul class="nav navbar-nav navbar-right">
 
-					<li><a href="#about" class="scroll">About</a></li>
-					<li><a href="#foreword" class="scroll">Foreword</a></li>
+					
+					
+					<li role="presentation" class="dropdown carat0">
+						<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">研究院介绍<span class="caret"></span> </a>
+							<ul class="dropdown-menu dropdown0">
+								<li><a href="#about" class="scroll">研究院概况</a></li>
+								<li><a href="#foreword" class="scroll">大学理事会</a></li>
+								<li><a href="#edifice" class="scroll">AC实验学校</a></li>
+							</ul>
+						</a>
+					</li>
+					
+					<li><a href="#events" class="scroll">新闻通告</a></li>
+					<li><a href="#news" class="scroll">文章阅读</a></li>
+					<li><a href="#faculty" class="scroll">专家介绍</a></li>
 
-					<!-- Dropdown -->
 					<li role="presentation" class="dropdown carat1">
-						<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown<span class="caret"></span> </a>
+						<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">AC项目<span class="caret"></span> </a>
 							<ul class="dropdown-menu dropdown1">
-								<li><a href="#admissions" class="scroll">Admissions</a></li>
-								<li><a href="#alumnus" class="scroll">Alumnus</a></li>
-								<li><a href="#programs" class="scroll">Programs</a></li>
-								<li><a href="#services" class="scroll">Services</a></li>
-								<li><a href="#faculty" class="scroll">Faculty</a></li>
-								<li><a href="#edifice" class="scroll">Edifices</a></li>
-								<li><a href="#project" class="scroll">Projects</a></li>
-								<li><a href="#events" class="scroll">Events</a></li>
+								<li><a href="#project" class="scroll">项目概况</a></li>
+								<li><a href="#services" class="scroll">课程设置</a></li>
+								<li><a href="#programs" class="scroll">考试内容</a></li>
 							</ul>
 					</li>
-					<!-- //Dropdown -->
+					<!-- Dropdown -->
+					
+					
+					<!--
+					<li><a href="#project" class="scroll">Projects</a></li>
+					<li><a href="#events" class="scroll">后台管理</a></li>
+					-->
 
-					<li><a href="#news" class="scroll">News</a></li>
-					<li><a href="#contact" class="scroll">Contact</a></li>
+					
+					<li><a href="#contact" class="scroll">联系我们</a></li>
 
 					<!-- Login-Button -->
 					<li>
 						<div class="login-pop">
 							<div id="loginpop">
-								<a href="#" id="loginButton"><span>Login</span></a>
+								<a href="#" id="loginButton"><span>登陆</span></a>
 								<div id="loginBox">
 									<form id="loginForm">
 										<fieldset id="body">
@@ -117,7 +130,7 @@ jQuery(document).ready(function($) {
 					</li>
 					<!-- //Login-Button -->
 
-					<!-- Signup-Button -->
+					<!-- Signup-Button>
 					<li>
 						<div class="login-pop">
 							<div id="loginpop">
@@ -149,7 +162,7 @@ jQuery(document).ready(function($) {
 						</div>
 						<script src="js/signup_jquery.js"></script>
 					</li>
-					<!-- //Signup-Button -->
+					//Signup-Button -->
 
 				</ul>
 			</div>
@@ -210,14 +223,14 @@ jQuery(document).ready(function($) {
 <!-- Content-Starts-Here -->
 <div class="content">
 	
-	<!-- Heading --><h1 class="abbr">SCHOOL FOR STUDENT EXCHANGE, ENGINEERING & TECHNOLOGY</h1><!-- //Heading -->
+	<!-- Heading --><h1 class="abbr">北京大学考试研究院/中国大学先修课程委员会</h1><!-- //Heading -->
 
 	<div class="container">
 		
 		<!-- About-Starts-Here -->
 		<div class="about slideanim" id="about">
-			<h2>ABOUT</h2>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			<h2></h2>
+			<p>这里是一大段介绍性文字</p>
 
 			<div class="about-info slideanim">
 				<div class="col-md-6 col-sm-6" id="about-pic">
@@ -233,16 +246,20 @@ jQuery(document).ready(function($) {
 		<!-- //About-Ends-Here -->
 
 		<!-- Foreword-Starts-Here -->
+		
 		<div class="foreword slideanim" id="foreword">
-			<h3>FOREWORD</h3>
+			<h3>大学理事会单位介绍</h3>
 			<p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
 			<span>Johann Schmidt</span>
 			<span>Vice-Chancellor</span>
 		</div>
+		
+		
 		<!-- //Foreword-Ends-Here -->
 
 		<!-- Admissions-Starts-Here -->
-		<div class="admissions slideanim" id="admissions">
+		
+		<div class="admissions slideanim" id="admissions" hidden=true>
 			<h3>ADMISSIONS-2016 PROSPECTUS</h3>
 			<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum velit esse cillum dolore eu fugiat nulla pariatur commodo. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
@@ -254,6 +271,7 @@ jQuery(document).ready(function($) {
 		<!-- //Admissions-Ends-Here -->
 
 		<!-- Alumnus-Starts-Here -->
+		<!--
 		<div class="alumnus slideanim" id="alumnus">
 			<h3>ALUMNUS</h3>
 			<div class="alumnus-grid">
@@ -275,36 +293,37 @@ jQuery(document).ready(function($) {
 				<div class="clearfix"></div>
 			</div>
 		</div>
+		-->
 		<!-- //Alumnus-Ends-Here -->
 
 		<!-- Programs-Starts-Here -->
 		<div class="programs slideanim" id="programs">
-			<h3>PROGRAMS</h3>
-			<p>Lorem Ipsum Dolor Sit Amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+			<h3>考试内容</h3>
+			<p>下面是一段描述性文字</p>
 
 			<div class="program-grid">
 				<div class="col-md-3 col-sm-6 p1">
 					<div class="program1">
-						<h4>Lorem</h4>
-						<p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+						<h4>考试科目A</h4>
+						<p>blablabablablababla</p>
 					</div>
 				</div>
 				<div class="col-md-3 col-sm-6 p1">
 					<div class="program2">
-						<h4>Ipsum</h4>
-						<p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+						<h4>考试科目B</h4>
+						<p>blablabablablababla</p>
 					</div>
 				</div>
 				<div class="col-md-3 col-sm-6 p1">
 					<div class="program3">
-						<h4>Dolor</h4>
-						<p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+						<h4>考试科目C</h4>
+						<p>blablabablablababla</p>
 					</div>
 				</div>
 				<div class="col-md-3 col-sm-6 p1">
 					<div class="program4">
-						<h4>Sitamet</h4>
-						<p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+						<h4>考试科目D</h4>
+						<p>blablabablablababla</p>
 					</div>
 				</div>
 				<div class="clearfix"></div>
@@ -314,29 +333,29 @@ jQuery(document).ready(function($) {
 
 		<!-- Services-Starts-Here -->
 		<div class="services slideanim" id="services">
-			<h3>SERVICES</h3>
+			<h3>课程设置</h3>
 			<p>We have taken up some Social Services done by our students in the slums and backward regions so that they can not only excel in education, but also as a good human being in the society.</p>
 			<div class="col-md-6 col-sm-6 s1">
 				<div class="services-info1">
-					<h4>Free Medical Services</h4>
+					<h4>课程A</h4>
 					<p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum cillum dolore eu fugiat nulla commodo.</p>
 				</div>
 			</div>
 			<div class="col-md-6 col-sm-6 s1">
 				<div class="services-info2">
-					<h4>Free Education</h4>
+					<h4>课程B</h4>
 					<p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum cillum dolore eu fugiat nulla commodo.</p>
 				</div>
 			</div>
 			<div class="col-md-6 col-sm-6 s1">
 				<div class="services-info3">
-					<h4>Free Medicine Supply</h4>
+					<h4>课程C</h4>
 					<p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum cillum dolore eu fugiat nulla commodo.</p>
 				</div>
 			</div>
 			<div class="col-md-6 col-sm-6 s1">
 				<div class="services-info4">
-					<h4>Social Interaction</h4>
+					<h4>课程D</h4>
 					<p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum cillum dolore eu fugiat nulla commodo.</p>
 				</div>
 			</div>
@@ -346,7 +365,7 @@ jQuery(document).ready(function($) {
 
 		<!-- Faculty-Starts-Here -->
 		<div class="faculty slideanim" id="faculty">
-			<h3>FACULTY</h3>
+			<h3>课程专家</h3>
 			<div class="col-md-3 col-sm-3 team-top">
 					<div class="view view-seventh">
 						<a href="#"><img class="img-responsive" src="images/f1.jpg" alt="name"></a>
@@ -465,7 +484,7 @@ jQuery(document).ready(function($) {
 
 		<!-- Edifice-Starts-Here -->
 		<div class="edifice slideanim" id="edifice">
-			<h3>INFRASTRUCTURE & FACILITIES</h3>
+			<h3>AC实验学校</h3>
 			<div class="gallery-cursual">
 
 				<!-- requried-jsfiles-for owl -->
@@ -519,14 +538,14 @@ jQuery(document).ready(function($) {
 
 		<!-- Projects-Starts-Here -->
 		<div class="project slideanim" id="project">
-			<h3>PROJECTS, RESEARCH AND DEVELOPMENT</h3>
+			<h3>项目概况</h3>
 
 			<div class="project-grid">
 				<div class="col-md-4 col-sm-4 p2">
 					<img src="images/e1.jpg" alt="project">
 				</div>
 				<div class="col-md-4 col-sm-4 p2">
-					<h4>Lorem Ipsum</h4>
+					<h4>情况</h4>
 					<p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui anim id est laborum cillum dolore eu fugiat nulla commodo. Sint occaecat cupidatat non proident, sunt in culpa qui officia laborum.</p>
 				</div>
 				<div class="col-md-4 col-sm-4 p2 p3">
@@ -536,7 +555,7 @@ jQuery(document).ready(function($) {
 					<img src="images/e3.jpg" alt="project">
 				</div>
 				<div class="col-md-4 col-sm-4 p2 p5">
-					<h4>Dolores Sit</h4>
+					<h4>介绍</h4>
 					<p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui anim id est laborum cillum dolore eu fugiat nulla commodo. Sint occaecat cupidatat non proident, sunt in culpa qui officia laborum.</p>
 				</div>
 				<div class="col-md-4 col-sm-4 p2 p6">
@@ -549,7 +568,7 @@ jQuery(document).ready(function($) {
 
 		<!-- Events-Starts-Here -->
 		<div class="events slideanim" id="events">
-			<h3>EVENTS</h3>
+			<h3>通告</h3>
 			<div class="event-grid">
 				<div class="col-md-4 col-sm-4 cal">
 					<div class="cal1 cal_2">
@@ -583,7 +602,7 @@ jQuery(document).ready(function($) {
 
 		<!-- News-Starts-Here -->
 		<div class="news slideanim" id="news">
-			<h3>OUR OWN NEWS PUBLICATION</h3>
+			<h3>文章阅读</h3>
 			<div class="news-img">
 				<div class="col-md-4 col-sm-4 n1">
 					<img src="images/n1.jpg" alt="news">
@@ -601,7 +620,7 @@ jQuery(document).ready(function($) {
 
 		<!-- Contact-Starts-Here -->
 		<div class="contact slideanim" id="contact">
-			<h3>CONTACT</h3>
+			<h3>联系我们</h3>
 			<form class="contact_form">
 
 				<div class="message">
@@ -612,12 +631,12 @@ jQuery(document).ready(function($) {
 					</div>
 			
 					<div class="col-md-6 col-sm-6 grid_6 c1">
-						<textarea placeholder="Message" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Message';}">Message</textarea>
+						<textarea placeholder="Message" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Message';}">说点儿什么...</textarea>
 					</div>
 					<div class="clearfix"> </div>
 				</div>
 
-				<input type="submit" class="more_btn" value="Send Message">
+				<input type="submit" class="more_btn" value="发信">
 			</form>
 		</div>
 		<!-- //Contact-Ends-Here -->
