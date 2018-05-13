@@ -20,7 +20,7 @@ def insertStatement(form):
           "(idcard, mobile, fullname, email, school, gender, level, subject, " \
           "occurence, activityType, isLunch, isMoslem, isShuttle, dateArrival, dateDeparture)" \
           "values({idcard}, {mobile}, '{fullname}', '{email}', '{school}', '{gender}', '{level}', '{subject}', " \
-          "{occurence}, '{activityType}', {isLunch}, {isMoslem}, {isShuttle}, '{dateArrival}', '{dateDeparture}');commit;".format(
+          "{occurence}, '{activityType}', {isLunch}, {isMoslem}, {isShuttle}, '{dateArrival}', '{dateDeparture}');".format(
         idcard=form['idcard'], mobile=form['mobile'], fullname=form['fullname'], email=form['email'],
         school=form['school'], gender=form['gender'], level=form['level'], subject=form['subject'],
         occurence=form['occurence'], activityType=form['activityType'], isLunch=form['isLunch'], isMoslem=form['isMoslem'],
@@ -38,6 +38,7 @@ def executeSQL(sql):
         if count > 0:
             rows = cursor.fetchall()
             rows = list(rows)
+        db.commit()
         cursor.close()
     except Exception, ex:
         bOK = False
