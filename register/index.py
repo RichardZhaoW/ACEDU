@@ -54,7 +54,7 @@ def login():
 
         flash('Wrong username or password!')
     # GET 请求
-    return render_template('login.html')
+    return render_template('signin.html')
 
 @app.route('/logout')
 @login_required
@@ -69,7 +69,7 @@ def register():
         form = request.form
         sql = insertStatement(form)
         print sql
-        bOK = executeSQL(sql)
+        bOK, _ = executeSQL(sql)
         if bOK:
             return u'报名成功'#outputInfo(form)
         else:
@@ -95,7 +95,7 @@ def insertStatement(form):
     sql = u"INSERT INTO acedu.register" \
           "(idcard, mobile, fullname, email, school, gender, level, subject, invoice, taxno," \
           "occurence, activityType, isLunch, isMoslem, isShuttle, dateArrival, dateDeparture)" \
-          "values({idcard}, {mobile}, '{fullname}', '{email}', '{school}', '{gender}', '{level}', '{subject}', " \
+          "values({idcard}, {mobile}, '{fullname}', '{email}', '{school}', '{gender}', '{level}', '{subject}', '{invoice}', '{taxno}', " \
           "{occurence}, '{activityType}', {isLunch}, {isMoslem}, {isShuttle}, '{dateArrival}', '{dateDeparture}');".format(
         idcard=form['idcard'], mobile=form['mobile'], fullname=form['fullname'], email=form['email'], invoice=form['invoice'],
         school=form['school'], gender=form['gender'], level=form['level'], subject=form['subject'],taxno=form['taxno'],
@@ -106,7 +106,7 @@ def insertStatement(form):
 
 def executeSQL(sql):
     db = None
-    bOK, rows = True, []
+    bOK, rows = False, []
     try:
         db = pymysql.connect(host=SQLHOST, db='acedu', user='root', passwd='Wlt@2018Up', use_unicode=True, charset='utf8')
         cursor = db.cursor()
@@ -116,6 +116,7 @@ def executeSQL(sql):
             rows = list(rows)
         db.commit()
         cursor.close()
+        bOK = True
     except Exception, ex:
         bOK = False
         print 'failed to execute: %s' % str(ex)
