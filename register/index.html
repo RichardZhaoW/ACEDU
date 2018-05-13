@@ -88,16 +88,25 @@ if(a.getAttribute("title") == title) a.disabled = false;
             <div class="form-row">
                     <div class="field-label"><label for="field13">学科</label>:</div>
                     <div class="field-widget"><input name="subject" id="subject" class="required" title="请输入学科" /></div>
-                </div>
+             </div>
             
             
         </fieldset>
         
     <fieldset>
         <legend>参会信息</legend>
+        <div class="form-row">
+            <div class="field-label"><label for="field20">发票抬头</label>:</div>
+            <div class="field-widget"><input name="invoice" id="invoice" title="发票抬头" /></div>
+        </div>
+        <div class="form-row">
+            <div class="field-label"><label for="field21">税务登记证号</label>:</div>
+            <div class="field-widget"><input name="taxno" id="taxno" title="税务登记证号" /></div>
+        </div>
+        
         
         <div class="form-row">
-            <div class="field-label"><label for="field14">第几次参加年会</label>:</div>
+            <div class="field-label"><label for="field22">第几次参加年会</label>:</div>
             <div class="field-widget">
                     <input type="radio" class="radio_input" name="occurence" value="1" checked="checked">第一次</input>
 					<input type="radio" class="radio_input" name="occurence" value="2">第二次</input>
@@ -107,7 +116,7 @@ if(a.getAttribute("title") == title) a.disabled = false;
         </div>
 
         <div class="form-row">
-                <div class="field-label"><label for="field15">参加活动种类</label>:</div>
+                <div class="field-label"><label for="field23">参加活动种类</label>:</div>
                 <div class="field-widget">
                     <select id="activityType" name="activityType" class="validate-selection" title="参加活动种类">
                         <option>请选择...</option>
@@ -118,37 +127,37 @@ if(a.getAttribute("title") == title) a.disabled = false;
                     </div>
         </div>
         <div class="form-row">
-                <div class="field-label"><label for="field16">是否同意安排午餐</label>:</div>
+                <div class="field-label"><label for="field24">是否同意安排午餐</label>:</div>
                 <div class="field-widget">
                         <input type="radio" class="radio_input" name="isLunch" value="1" checked="checked">是</input>
-						<input type="radio" class="radio_input" name="isLunch" value="0">否</input>
+                        <input type="radio" class="radio_input" name="isLunch" value="0">否</input>
                 </div>
         </div>
 
         <div class="form-row">
-                <div class="field-label"><label for="field17">是否回族</label>:</div>
+                <div class="field-label"><label for="field25">是否回族</label>:</div>
                 <div class="field-widget">	
-						<input type="radio" class="radio_input" name="isMoslem" value="1">是</input>
-						<input type="radio" class="radio_input" name="isMoslem" value="0" checked="checked">否</input>
+                        <input type="radio" class="radio_input" name="isMoslem" value="1">是</input>
+                        <input type="radio" class="radio_input" name="isMoslem" value="0" checked="checked">否</input>
                 </div>
         </div>
 
         <div class="form-row">
-                <div class="field-label"><label for="field18">抵达日期</label>:</div>
+                <div class="field-label"><label for="field26">抵达日期</label>:</div>
                 <div class="field-widget">
                         <input type="date" class="required validate-date" name="dateArrival"/>
                     </div>
         </div>
 
         <div class="form-row">
-                <div class="field-label"><label for="field18">离会日期</label>:</div>
+                <div class="field-label"><label for="field27">离会日期</label>:</div>
                 <div class="field-widget">
                         <input type="date" class="required validate-date" name="dateDeparture"/>
                     </div>
         </div>
 
         <div class="form-row">
-                <div class="field-label"><label for="field19">教师工作坊期间需要接送</label>?</div>
+                <div class="field-label"><label for="field28">教师工作坊期间需要接送</label>?</div>
                 <div class="field-widget">
                         <input type="radio" class="radio_input" name="isShuttle" value="1">是</input>
 						<input type="radio" class="radio_input" name="isShuttle" value="0" checked="checked">否</input>

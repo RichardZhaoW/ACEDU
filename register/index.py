@@ -1,8 +1,8 @@
 # -*- coding: UTF-8 -*-
 #coding=utf-8
 from flask import Flask, render_template, flash, redirect, request, url_for, abort
-from flask.ext.login import LoginManager, UserMixin, login_user, logout_user
-from flask.ext.login import current_user, login_required, fresh_login_required
+from flask_login import LoginManager, UserMixin, login_user, logout_user
+from flask_login import current_user, login_required, fresh_login_required
 import pymysql
 
 app = Flask(__name__,static_folder='', static_url_path='', template_folder='')
@@ -50,7 +50,7 @@ def login():
             # 如果请求中有next参数，则重定向到其指定的地址，
             # 没有next参数，则重定向到"index"视图
             next = request.args.get('next')
-            return redirect(next or url_for('index'))
+            return redirect(next or url_for('register'))
 
         flash('Wrong username or password!')
     # GET 请求
@@ -93,12 +93,12 @@ def outputInfo(form):
 
 def insertStatement(form):
     sql = u"INSERT INTO acedu.register" \
-          "(idcard, mobile, fullname, email, school, gender, level, subject, " \
+          "(idcard, mobile, fullname, email, school, gender, level, subject, invoice, taxno" \
           "occurence, activityType, isLunch, isMoslem, isShuttle, dateArrival, dateDeparture)" \
           "values({idcard}, {mobile}, '{fullname}', '{email}', '{school}', '{gender}', '{level}', '{subject}', " \
           "{occurence}, '{activityType}', {isLunch}, {isMoslem}, {isShuttle}, '{dateArrival}', '{dateDeparture}');".format(
-        idcard=form['idcard'], mobile=form['mobile'], fullname=form['fullname'], email=form['email'],
-        school=form['school'], gender=form['gender'], level=form['level'], subject=form['subject'],
+        idcard=form['idcard'], mobile=form['mobile'], fullname=form['fullname'], email=form['email'], invoice=form['invoice'],
+        school=form['school'], gender=form['gender'], level=form['level'], subject=form['subject'],taxno=form['taxno'],
         occurence=form['occurence'], activityType=form['activityType'], isLunch=form['isLunch'], isMoslem=form['isMoslem'],
          isShuttle=form['isShuttle'], dateArrival=form['dateArrival'], dateDeparture=form['dateDeparture']
     )
