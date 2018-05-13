@@ -32,7 +32,7 @@ def executeSQL(sql):
     db = None
     bOK, rows = True, []
     try:
-        db = pymysql.connect(host=SQLHOST, db='acedu', user='root', passwd='Wlt@2018Up')
+        db = pymysql.connect(host=SQLHOST, db='acedu', user='root', passwd='Wlt@2018Up', use_unicode=True, charset='utf8')
         cursor = db.cursor()
         count = cursor.execute(sql)
         if count > 0:
