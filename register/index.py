@@ -22,8 +22,8 @@ def query_user(username):
     params = [username]
     bOK, rows = executeSQL(sql, params)
     print 'rows = %s' % str(rows)
-    if bOK and rows:
-        return {username: rows[1]}
+    if bOK and rows and rows[0]:
+        return {'username':username, 'password':rows[0][1]}
     else:
         return None
 
