@@ -45,8 +45,16 @@ if(a.getAttribute("title") == title) a.disabled = false;
         
         <div class="form-row">
             <div class="field-label"><label for="field1">性别</label>:</div>
-            <div class="field-widget"><input name="gender" id="gender" class="required" title="请输入性别" /></div>
+            <div class="field-widget">
+				<select id="gender" name="gender" class="validate-selection" title="性别">
+                        <option>请选择...</option>
+                        <option>男</option>
+                        <option>女</option>
+                    </select>
+			</div>
         </div>
+		
+		
         
         <div class="form-row">
             <div class="field-label"><label for="field2">身份证号码</label>:</div>
@@ -91,90 +99,60 @@ if(a.getAttribute("title") == title) a.disabled = false;
         <div class="form-row">
             <div class="field-label"><label for="field14">第几次参加年会</label>:</div>
             <div class="field-widget">
-                    <select id="occurency" name="occurency" class="validate-selection" title="第几次参加年会">
-                        <option>请选择...</option>
-                        <option>第一次</option>
-                        <option>第二次</option>
-                        <option>第三次</option>
-                        <option>第四次</option>
-                        <option>第五次</option>
-                        <option>五次以上</option>
-                    </select>
+                    <input type="radio" class="radio_input" name="occurence" value="1" checked="checked">第一次</input>
+					<input type="radio" class="radio_input" name="occurence" value="2">第二次</input>
+					<input type="radio" class="radio_input" name="occurence" value="3">第三次</input>
+					<input type="radio" class="radio_input" name="occurence" value="4">三次以上</input>
                 </div>
         </div>
 
         <div class="form-row">
                 <div class="field-label"><label for="field15">参加活动种类</label>:</div>
                 <div class="field-widget">
-                        <select id="activityType" name="activityType" class="validate-selection" title="参加活动种类">
-                            <option>请选择...</option>
-                            <option>年会</option>
-                            <option>教师工作坊</option>
-                            <option>年会+教师工作坊</option>
-                        </select>
+                    <select id="activityType" name="activityType" class="validate-selection" title="参加活动种类">
+                        <option>请选择...</option>
+                        <option>年会</option>
+                        <option>教师工作坊</option>
+                        <option>年会+教师工作坊</option>
+                    </select>
                     </div>
         </div>
         <div class="form-row">
                 <div class="field-label"><label for="field16">是否同意安排午餐</label>:</div>
                 <div class="field-widget">
-                        <select id="isLunch" name="isLunch" class="validate-selection" title="是否同意安排午餐">
-                            <option>请选择...</option>
-                            <option>否</option>
-                            <option>是</option>
-                        </select>
-                    </div>
+                        <input type="radio" class="radio_input" name="isLunch" value="1" checked="checked">是</input>
+						<input type="radio" class="radio_input" name="isLunch" value="0">否</input>
+                </div>
         </div>
 
         <div class="form-row">
                 <div class="field-label"><label for="field17">是否回族</label>:</div>
-                <div class="field-widget">
-                        <select id="isMoslem" name="isMoslem" class="validate-selection" title="是否穆斯林">
-                            <option>请选择...</option>
-                            <option>否</option>
-                            <option>是</option>
-                        </select>
-                    </div>
+                <div class="field-widget">	
+						<input type="radio" class="radio_input" name="isMoslem" value="1">是</input>
+						<input type="radio" class="radio_input" name="isMoslem" value="0" checked="checked">否</input>
+                </div>
         </div>
 
         <div class="form-row">
                 <div class="field-label"><label for="field18">抵达日期</label>:</div>
                 <div class="field-widget">
-                        <select id="dateArrive" name="dateArrive" class="validate-selection" title="抵达日期">
-                            <option>请选择...</option>
-                            <option>2018-06-01之前</option>
-                            <option>2018-06-01</option>
-                            <option>2018-06-02</option>
-                            <option>2018-06-03</option>
-                            <option>2018-06-04</option>
-                            <option>2018-06-05</option>
-                        </select>
+                        <input type="date" class="required validate-date" name="dateArrival"/>
                     </div>
         </div>
 
         <div class="form-row">
                 <div class="field-label"><label for="field18">离会日期</label>:</div>
                 <div class="field-widget">
-                        <select id="dateArrive" name="dateArrive" class="validate-selection" title="离会日期">
-                            <option>请选择...</option>
-                            <option>2018-06-05</option>
-                            <option>2018-06-06</option>
-                            <option>2018-06-07</option>
-                            <option>2018-06-08</option>
-                            <option>2018-06-09</option>
-                            <option>2018-06-09之后</option>
-                        </select>
+                        <input type="date" class="required validate-date" name="dateDeparture"/>
                     </div>
         </div>
 
         <div class="form-row">
                 <div class="field-label"><label for="field19">教师工作坊期间需要接送</label>?</div>
                 <div class="field-widget">
-                        <select id="isShuttle" name="isShuttle" class="validate-selection" title="是否接送">
-                            <option>请选择...</option>
-                            <option>否</option>
-                            <option>是</option>
-                        </select>
-                    </div>
+                        <input type="radio" class="radio_input" name="isShuttle" value="1">是</input>
+						<input type="radio" class="radio_input" name="isShuttle" value="0" checked="checked">否</input>
+                </div>
         </div>
       
     </fieldset>  
