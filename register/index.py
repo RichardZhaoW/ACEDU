@@ -18,9 +18,19 @@ class User(UserMixin):
     pass
 
 def query_user(username):
-    for user in users:
-        if user['username'] == username:
-            return user
+    sql = 'select user, password from users where user=%s;'
+    params = [username]
+    bOK, rows = executeSQL(sql, params)
+    print 'rows = %s' % str(rows)
+    if bOK and rows:
+        return {username: rows[1]}
+    else:
+        return None
+
+#def query_user(username):
+#    for user in users:
+#        if user['username'] == username:
+#            return user
 
 @login_manager.user_loader
 def load_user(username):
@@ -68,7 +78,6 @@ def register():
     if request.method == 'POST':
         form = request.form
         sql = insertStatement(form)
-        print sql
         bOK, _ = executeSQL(sql)
         if bOK:
             return u'报名成功'#outputInfo(form)
@@ -104,13 +113,14 @@ def insertStatement(form):
     )
     return sql
 
-def executeSQL(sql):
+def executeSQL(sql, params=None):
     db = None
     bOK, rows = False, []
     try:
+        print 'SQL: %s' % sql
         db = pymysql.connect(host=SQLHOST, db='acedu', user='root', passwd='Wlt@2018Up', use_unicode=True, charset='utf8')
         cursor = db.cursor()
-        count = cursor.execute(sql)
+        count = cursor.execute(sql, params)
         if count > 0:
             rows = cursor.fetchall()
             rows = list(rows)
