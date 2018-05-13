@@ -14,7 +14,7 @@ def register():
 def getSQL(form):
     sql = "INSERT INTO acedu.register" \
           "(idcard, mobile, fullname, email, school, gender, level, subject, " \
-          "occurence, activityType, isLunch, isMoslem, isShuttle, dateArrival, dateDeparture)" \ 
+          "occurence, activityType, isLunch, isMoslem, isShuttle, dateArrival, dateDeparture)" \
           "values({idcard}, {mobile}, '{fullname}', '{email}', '{school}', '{gender}', '{level}', '{subject}', " \
           "{occurence}, {activityType}, {isLunch}, {isMoslem}, {isShuttle}, '{dateArrival}', '{dateDeparture}');".format(
         idcard=form['idcard'], mobile=form['mobile'], fullname=form['fullname'], email=form['email'],
