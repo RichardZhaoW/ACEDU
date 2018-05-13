@@ -11,9 +11,27 @@ def register():
         form = request.form
         sql = insertStatement(form)
         print sql
-        executeSQL(sql)
-        return u'注册成功'
+        bOK = executeSQL(sql)
+        if bOK:
+            return output(form)
+        else:
+            return u'注册失败\n请联系ioe-te@pku.edu.cn'
     return render_template('index.html')
+
+def outputInfo(form):
+    outputString = u'姓名:\t{fullname}\n性别:\t{gender}身份证号:\t{idcard}\n手机号:\t{mobile}\n邮箱:\t{email}\n' \
+                   u'院校:\t{school}\n职务:\t{level}\n学科:\t{subject}\n' \
+                   u'抵达日期:\t{dateArrival}\n离会日期:\t{dateDeparture}\n'.format(fullname=form['fullname'],
+                                                                            gender=form['gender'],
+                                                                            idcard=form['idcard'],
+                                                                            mobile=form['mobile'],
+                                                                            email=form['email'],
+                                                                            school=form['school'],
+                                                                            level=form['level'],
+                                                                            subject=form['subject'],
+                                                                            dateArrival=form['dateArrival'],
+                                                                            dateDeparture=form['dateDeparture'])
+    return outputString
 
 def insertStatement(form):
     sql = u"INSERT INTO acedu.register" \
