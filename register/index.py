@@ -5,7 +5,7 @@ import pymysql
 app = Flask(__name__,static_folder='', static_url_path='', template_folder='')
 SQLHOST = "rm-2zex7u1bczx7a738v.mysql.rds.aliyuncs.com"
 
-@app.route("/register", methods=['POST'])
+@app.route("/register", methods=['GET','POST'])
 def register():
     if request.method == 'POST':
         form = request.form
