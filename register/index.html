@@ -35,7 +35,7 @@ if(a.getAttribute("title") == title) a.disabled = false;
     </div>
 
 	<div class="form_content">
-    <form id="test" action="#" method="get">
+    <form id="test" action="#" method="post">
     <fieldset>
         <legend>基本信息</legend>
         <div class="form-row">
@@ -77,7 +77,7 @@ if(a.getAttribute("title") == title) a.disabled = false;
             
             <div class="form-row">
                 <div class="field-label"><label for="field11">邮箱</label>:</div>
-                <div class="field-widget"><input name="email" id="email" class="required  validate-email" title="请输入邮箱" /></div>
+                <div class="field-widget"><input type="email" name="email" id="email" class="required  validate-email" title="请输入邮箱" /></div>
             </div>
             
             <div class="form-row">
