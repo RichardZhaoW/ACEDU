@@ -32,7 +32,7 @@ def load_user(username):
 
 @login_manager.unauthorized_handler
 def unauthorized_handler():
-    return 'Unauthorized'
+    return redirect(url_for('login'))
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
@@ -93,7 +93,7 @@ def outputInfo(form):
 
 def insertStatement(form):
     sql = u"INSERT INTO acedu.register" \
-          "(idcard, mobile, fullname, email, school, gender, level, subject, invoice, taxno" \
+          "(idcard, mobile, fullname, email, school, gender, level, subject, invoice, taxno," \
           "occurence, activityType, isLunch, isMoslem, isShuttle, dateArrival, dateDeparture)" \
           "values({idcard}, {mobile}, '{fullname}', '{email}', '{school}', '{gender}', '{level}', '{subject}', " \
           "{occurence}, '{activityType}', {isLunch}, {isMoslem}, {isShuttle}, '{dateArrival}', '{dateDeparture}');".format(
@@ -118,7 +118,7 @@ def executeSQL(sql):
         cursor.close()
     except Exception, ex:
         bOK = False
-        print ex
+        print 'failed to execute: %s' % str(ex)
     finally:
         if db:
             db.close()
