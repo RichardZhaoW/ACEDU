@@ -1,3 +1,5 @@
+# -*- coding: UTF-8 -*-
+#coding=utf-8
 from flask import Flask, render_template, flash, redirect, request
 app = Flask(__name__,static_folder='', static_url_path='', template_folder='')
 
