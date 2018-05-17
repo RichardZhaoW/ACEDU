@@ -1,0 +1,789 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+.clear {
+    clear: both;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+body,
+a {
+    font-family: "SF Pro SC", "SF Pro Text", "SF Pro Icons", "PingFang SC", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    font-size: 12px;
+    color: #444;
+    text-decoration: none
+}
+
+
+/*头部    */
+
+.header_logo {
+    height: 80px;
+    width: 100%;
+    /* border-bottom: 2px solid #94070a; */
+    background: #94070a
+}
+
+.header_logo_con {
+    width: 960px;
+    margin: 0 auto;
+}
+
+.h1_logo {
+    padding: 24px 0 0 0;
+    font-family: "SF Pro SC", "SF Pro Text", "SF Pro Icons", "PingFang SC", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    font-weight: normal;
+    font-size: 32px;
+    line-height: 32px;
+    color: white;
+}
+
+.header_login_info {
+    height: 40px;
+    width: 100%;
+    border-bottom: 1px solid #CCC;
+    background: #EEE;
+}
+
+.header_login_info_con {
+    width: 960px;
+    margin: 0 auto;
+}
+
+.welcome_info {
+    font-family: "SF Pro SC", "SF Pro Text", "SF Pro Icons", "PingFang SC", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 40px;
+    color: #94070a;
+}
+
+.header_nav {
+    font-family: "SF Pro SC", "SF Pro Text", "SF Pro Icons", "PingFang SC", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 40px;
+    color: #333;
+    font-weight: normal;
+}
+
+.header_nav:hover {
+    color: #94070a;
+    font-weight: bold;
+}
+
+
+/*中间    */
+
+.main {
+    width: 100%;
+}
+
+.mainCon {
+    width: 960px;
+    margin: auto;
+    border-collapse: collapse;
+}
+
+.leftNav {
+    float: left;
+    width: 12rem;
+    margin: 1.5rem 0 8rem 0;
+    padding: 0.5rem 0 0.5rem 0;
+    border: 1px solid #94070a;
+    border-left: 1px solid #94070a;
+    border-collapse: collapse;
+}
+
+.leftNav_li {
+    display: block;
+    height: 28px;
+    font-size: 14px;
+    font-family: "SF Pro SC", "SF Pro Text", "SF Pro Icons", "PingFang SC", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    font-weight: normal;
+    line-height: 28px;
+    color: #333;
+    padding: 0 0 0 25px;
+}
+
+.leftNav_li:hover {
+    color: #FFF;
+    background-color: #94070a;
+}
+
+.leftNav_li_selected {
+    display: block;
+    height: 28px;
+    font-size: 14px;
+    font-family: "SF Pro SC", "SF Pro Text", "SF Pro Icons", "PingFang SC", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    font-weight: normal;
+    line-height: 28px;
+    color: #FFF;
+    padding: 0 0 0 25px;
+    background-color: #94070a;
+}
+
+.leftNav_li_more {
+    display: block;
+    height: 28px;
+    font-size: 14px;
+    font-family: "SF Pro SC", "SF Pro Text", "SF Pro Icons", "PingFang SC", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    font-weight: normal;
+    line-height: 28px;
+    color: #333;
+    padding: 0 0 0 25px;
+    background: url(../image/show_more.bmp) 6px 10px no-repeat;
+}
+
+.leftNav_li_more:hover {
+    color: #FFF;
+    background: url(../image/show_more_hover.bmp) 6px 10px no-repeat;
+    background-color: #94070a;
+}
+
+.leftNav_li_more_selected {
+    display: block;
+    height: 28px;
+    font-size: 14px;
+    font-family: "SF Pro SC", "SF Pro Text", "SF Pro Icons", "PingFang SC", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    font-weight: normal;
+    line-height: 28px;
+    color: #FFF;
+    padding: 0 0 0 25px;
+    background: url(../image/show_more_hover.bmp) 6px 10px no-repeat;
+    background-color: #94070a;
+}
+
+.leftNav_li_less {
+    display: block;
+    height: 28px;
+    font-size: 14px;
+    font-family: "SF Pro SC", "SF Pro Text", "SF Pro Icons", "PingFang SC", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    font-weight: normal;
+    line-height: 28px;
+    color: #333;
+    padding: 0 0 0 25px;
+    background: url(../image/show_less.bmp) 6px 10px no-repeat;
+}
+
+.leftNav_li_less:hover {
+    color: #FFF;
+    background: url(../image/show_less_hover.bmp) 6px 10px no-repeat;
+    background-color: #94070a;
+}
+
+.leftNav_li_less_selected {
+    display: block;
+    height: 28px;
+    font-size: 14px;
+    font-family: "SF Pro SC", "SF Pro Text", "SF Pro Icons", "PingFang SC", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    font-weight: normal;
+    line-height: 28px;
+    color: #FFF;
+    padding: 0 0 0 25px;
+    background: url(../image/show_less_hover.bmp) 6px 10px no-repeat;
+    background-color: #94070a;
+}
+
+.leftNav_block {
+    display: block;
+    height: 1px;
+    background: #ccc;
+    margin: 10px 10px 10px 10px;
+}
+
+.rightContent {
+    float: left;
+    margin: 1.5rem 0 0 2rem;
+    background-color: #fff;
+    padding: 0 0 0 0;
+    border-collapse: collapse;
+    max-width: 30rem;
+}
+
+
+/*登录页面    */
+
+.leftLoginIntro {
+    float: left;
+    width: 500px;
+    padding: 50px 0 100px 0;
+}
+
+.rightLoginContent {
+    float-clear: both;
+    margin-left: 500px;
+    width: 280px;
+    background-color: #fff;
+    padding: 50px 0 20px 20px;
+    border-collapse: collapse;
+}
+
+.leftLoginIntro h2 {
+    margin: 20px 0 20px 0;
+    font-family: "SF Pro SC", "SF Pro Text", "SF Pro Icons", "PingFang SC", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 24px;
+    color: #000;
+}
+
+.login_intro_table tr td {
+    height: 25px;
+}
+
+.loginBox h2 {
+    margin: 20px 0 20px 0;
+    font-family: "SF Pro SC", "SF Pro Text", "SF Pro Icons", "PingFang SC", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 24px;
+    color: #000;
+}
+
+.inputBox {
+    width: 270px;
+    margin: 0 0 12px 0;
+    padding: 0 5px 0 5px;
+    border: 1px solid #ccc;
+    height: 36px;
+    font-size: 14px;
+    line-height: 36px;
+    font-family: "SF Pro SC", "SF Pro Text", "SF Pro Icons", "PingFang SC", "Helvetica Neue", "Helvetica", "Arial", sans-serif, verdana;
+}
+
+.inputBox_short {
+    width: 150px;
+    margin: 0 0 12px 0;
+    padding: 0 5px 0 5px;
+    border: 1px solid #ccc;
+    height: 36px;
+    font-size: 14px;
+    line-height: 36px;
+    font-family: "SF Pro SC", "SF Pro Text", "SF Pro Icons", "PingFang SC", "Helvetica Neue", "Helvetica", "Arial", sans-serif, verdana;
+}
+
+.captcha {
+    width: 80px;
+    margin: 0 0 12px 0;
+    padding: 4px 0 4px 0;
+    height: 32px;
+    font-family: "SF Pro SC", "SF Pro Text", "SF Pro Icons", "PingFang SC", "Helvetica Neue", "Helvetica", "Arial", sans-serif, verdana;
+}
+
+.login_error {
+    display: block;
+    height: 10px;
+    line-height: 22px;
+    color: #e32929;
+    padding: 10px 0 0 40px;
+}
+
+
+/*footer    */
+
+.foot {
+    height: 100px;
+    width: 100%;
+    background: #eee;
+    border-top: 1px solid #CCC;
+}
+
+.footer {
+    width: 960px;
+    margin: auto;
+    text-align: center;
+    padding-left: 0px;
+}
+
+.footer .copyright {
+    font-family: arial, sans-serif;
+    font-size: 12px;
+    padding: 15px 0 0 0;
+    color: #666
+}
+
+
+/*button    */
+
+.login_button {
+    width: 100px;
+    height: 36px;
+    margin: 10px 0 0 0;
+    background: #94070a;
+    border: 0;
+    font-family: "SF Pro SC", "SF Pro Text", "SF Pro Icons", "PingFang SC", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 36px;
+    color: #FFF;
+}
+
+.login_button:hover {
+    cursor: pointer;
+}
+
+.register_button {
+    width: 100px;
+    height: 36px;
+    margin: 20px 0 0 0;
+    background: #e8e8e8;
+    border: 0;
+    font-family: "SF Pro SC", "SF Pro Text", "SF Pro Icons", "PingFang SC", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 36px;
+    color: #000;
+}
+
+.register_button:hover {
+    cursor: pointer;
+}
+
+.submit_button {
+    width: 100px;
+    height: 28px;
+    margin: 10px 0 10px 0;
+    background: #94070a;
+    border: 0;
+    font-family: "SF Pro SC", "SF Pro Text", "SF Pro Icons", "PingFang SC", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 28px;
+    color: #FFF;
+}
+
+.submit_button:hover {
+    cursor: pointer;
+}
+
+.submit_button_grey {
+    width: 100px;
+    height: 28px;
+    margin: 10px 0 10px 0;
+    background: #888;
+    border: 0;
+    font-family: "SF Pro SC", "SF Pro Text", "SF Pro Icons", "PingFang SC", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 28px;
+    color: #FFF;
+}
+
+.submit_button_grey:hover {
+    background: #94070a;
+    cursor: pointer;
+}
+
+.text12 {
+    font-family: sans-serif;
+    font-size: 12px;
+    line-height: 20px;
+    color: #444;
+    text-decoration: none;
+}
+
+.text12 a:hover {
+    text-decoration: underline;
+}
+
+.text14 {
+    font-family: sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+    color: #696969;
+    font-weight: bold;
+}
+
+.text14b {
+    font-family: sans-serif;
+    font-size: 14px;
+    line-height: 27px;
+    color: #444;
+    font-weight: bold;
+}
+
+.bgn-z {
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center top;
+}
+
+.text12-blue {
+    font-family: sans-serif;
+    font-size: 12px;
+    line-height: 28px;
+    color: #2661FA;
+}
+
+.text12-blue a:link {
+    font-family: sans-serif;
+    font-size: 12px;
+    line-height: 28px;
+    color: #2661FA;
+    text-decoration: none
+}
+
+.text12-blue a:visited {
+    font-family: sans-serif;
+    font-size: 12px;
+    line-height: 28px;
+    color: #2661FA;
+    text-decoration: none
+}
+
+.text12-blue a:hover {
+    font-family: sans-serif;
+    font-size: 12px;
+    line-height: 28px;
+    color: #1641FA;
+    text-decoration: none
+}
+
+.title_L {
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 18pt;
+    COLOR: #000099;
+    LINE-HEIGHT: 30px;
+}
+
+.input-xx {
+    font-family: sans-serif;
+    border-top-width: thin;
+    border-right-width: thin;
+    border-bottom-width: 1px;
+    border-left-width: thin;
+    border-top-style: none;
+    border-right-style: none;
+    border-bottom-style: dashed;
+    border-left-style: none;
+    border-top-color: #0033FF;
+    border-right-color: #0033FF;
+    border-bottom-color: #0033FF;
+    border-left-color: #0033FF;
+}
+
+.input1 {
+    BORDER-RIGHT: #ADB4CD 1px solid;
+    BORDER-TOP: #ADB4CD 1px solid;
+    FONT-SIZE: 12px;
+    BORDER-LEFT: #ADB4CD 1px solid;
+    BORDER-BOTTOM: #ADB4CD 1px solid;
+    HEIGHT: 16px;
+    BACKGROUND-COLOR: #ffffff
+}
+
+.input2 {
+    BORDER-RIGHT: #ADB4CD 1px solid;
+    BORDER-TOP: #ADB4CD 1px solid;
+    FONT-SIZE: 12px;
+    BORDER-LEFT: #ADB4CD 1px solid;
+    BORDER-BOTTOM: #ADB4CD 1px solid;
+    BACKGROUND-COLOR: #ffffff
+}
+
+.bgn-b {
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+}
+
+.leftlink {
+    display: block;
+    text-align: left;
+    padding-left: 35px;
+    text-decoration: none;
+    font-family: "黑体", sans-serif, arial;
+    font-size: 13px;
+    line-height: 33px;
+    color: black;
+    font-weight: bold;
+    background-image: url("../image/anniubeijing.gif");
+    background-repeat: no-repeat;
+}
+
+.bitian {
+    color: red;
+}
+
+.app_table {
+    border: 1px solid #ddd;
+    border-collapse: collapse;
+    padding: 3px;
+    width: 790px;
+    margin-bottom: 20px;
+}
+
+.app_table tr td {
+    border: 1px solid #ddd;
+    border-collapse: collapse;
+    padding: 0 8px 0 8px;
+    height: 29px;
+}
+
+.app_table_input {
+    border: #ADB4CD 1px solid;
+    height: 23px;
+    width: 400px;
+}
+
+.app_table_input_auto {
+    border: #ADB4CD 1px solid;
+    height: 23px;
+}
+
+.app_table_input_50 {
+    border: #ADB4CD 1px solid;
+    height: 23px;
+    width: 50px;
+}
+
+.app_table_input_60 {
+    border: #ADB4CD 1px solid;
+    height: 23px;
+    width: 60px;
+}
+
+.app_table_input_80 {
+    border: #ADB4CD 1px solid;
+    height: 23px;
+    width: 80px;
+}
+
+.app_table_input_100 {
+    border: #ADB4CD 1px solid;
+    height: 23px;
+    width: 100px;
+}
+
+.app_table_input_120 {
+    border: #ADB4CD 1px solid;
+    height: 23px;
+    width: 120px;
+}
+
+.app_table_input_150 {
+    border: #ADB4CD 1px solid;
+    height: 23px;
+    width: 150px;
+}
+
+.app_table_input_200 {
+    border: #ADB4CD 1px solid;
+    height: 23px;
+    width: 200px;
+}
+
+.app_table_input_250 {
+    border: #ADB4CD 1px solid;
+    height: 23px;
+    width: 250px;
+}
+
+.app_table_input_300 {
+    border: #ADB4CD 1px solid;
+    height: 23px;
+    width: 300px;
+}
+
+.app_table_input_350 {
+    border: #ADB4CD 1px solid;
+    height: 23px;
+    width: 350px;
+}
+
+.app_table_input_400 {
+    border: #ADB4CD 1px solid;
+    height: 23px;
+    width: 400px;
+}
+
+.app_table_input_500 {
+    border: #ADB4CD 1px solid;
+    height: 23px;
+    width: 500px;
+}
+
+.app_table_input_600 {
+    border: #ADB4CD 1px solid;
+    height: 23px;
+    width: 600px;
+}
+
+.app_table_input_700 {
+    border: #ADB4CD 1px solid;
+    height: 23px;
+    width: 700px;
+}
+
+.app_table_textarea {
+    border: #ADB4CD 1px solid;
+    width: 700px;
+    height: 200px;
+    line-height: 18px;
+}
+
+.app_table_textarea_400_100 {
+    border: #ADB4CD 1px solid;
+    width: 400px;
+    height: 100px;
+    line-height: 18px;
+}
+
+.app_table_textarea_500_100 {
+    border: #ADB4CD 1px solid;
+    width: 500px;
+    height: 100px;
+    line-height: 18px;
+}
+
+.app_table_textarea_600_100 {
+    border: #ADB4CD 1px solid;
+    width: 600px;
+    height: 100px;
+    line-height: 18px;
+}
+
+.app_table_textarea_700_100 {
+    border: #ADB4CD 1px solid;
+    width: 700px;
+    height: 100px;
+    line-height: 18px;
+}
+
+.app_table_textarea_400_150 {
+    border: #ADB4CD 1px solid;
+    width: 400px;
+    height: 150px;
+    line-height: 18px;
+}
+
+.app_table_textarea_500_150 {
+    border: #ADB4CD 1px solid;
+    width: 500px;
+    height: 150px;
+    line-height: 18px;
+}
+
+.app_table_textarea_600_150 {
+    border: #ADB4CD 1px solid;
+    width: 600px;
+    height: 150px;
+    line-height: 18px;
+}
+
+.app_table_textarea_700_150 {
+    border: #ADB4CD 1px solid;
+    width: 700px;
+    height: 150px;
+    line-height: 18px;
+}
+
+.app_table_textarea_400_200 {
+    border: #ADB4CD 1px solid;
+    width: 400px;
+    height: 200px;
+    line-height: 18px;
+}
+
+.app_table_textarea_500_200 {
+    border: #ADB4CD 1px solid;
+    width: 500px;
+    height: 200px;
+    line-height: 18px;
+}
+
+.app_table_textarea_600_200 {
+    border: #ADB4CD 1px solid;
+    width: 600px;
+    height: 200px;
+    line-height: 18px;
+}
+
+.app_table_textarea_700_200 {
+    border: #ADB4CD 1px solid;
+    width: 700px;
+    height: 200px;
+    line-height: 18px;
+}
+
+.pic_view {
+    border: 0;
+    border-collapse: collapse;
+}
+
+.pic_view tr td {
+    text-align: center;
+    border-collapse: collapse;
+    padding: 1px;
+    width: 140px;
+    height: 210px;
+}
+
+.bdtz_print {
+    border-collapse: collapse;
+    width: 720px;
+}
+
+.bdtz_content_print {
+    border: 1px solid #000000;
+    border-collapse: collapse;
+    padding-left: 8px;
+    padding-right: 8px;
+    height: 48px;
+    line-height: 40px;
+    font-size: 18px;
+}
+
+.table_print {
+    border-collapse: collapse;
+    width: 720px;
+}
+
+.title_print {
+    font-family: "黑体", "simhei", sans-serif;
+    font-size: 28px;
+    color: #000000;
+}
+
+.title_print_small {
+    font-family: "黑体", "simhei", sans-serif;
+    font-size: 24px;
+    line-height: 24px;
+    color: #000000;
+}
+
+.lanmu_head_print {
+    display: block;
+    width: 720px;
+    text-align: left;
+    font-family: sans-serif;
+    font-size: 18px;
+    color: #000000;
+    font-weight: bold;
+    line-height: 25px;
+    border-collapse: collapse;
+}
+
+.content_print {
+    font-family: sans-serif;
+    font-size: 14px;
+    line-height: 17px;
+    color: #000000;
+    height: 33px;
+    border: 1px solid #000;
+    border-collapse: collapse;
+    padding-left: 3px;
+    padding-right: 3px;
+}

@@ -1,0 +1,135 @@
+
+<!-- saved from url=(0057)http://www.ioe.pku.edu.cn/test-register/detailed-info.php -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <link href="./statics/style.css" rel="stylesheet" type="text/css">
+    <script src="./statics/info-complete.js.下载"></script>
+    <title>中国大学先修课（AC）年会报名平台</title>
+
+    </head><body>
+        <div class="header_logo">
+            <div class="header_logo_con">
+                <h1 class="h1_logo">中国大学先修课（AC）年会报名平台</h1>
+            </div>
+        </div>
+
+        <div class="main">
+            <div class="mainCon">
+                <div class="leftNav">
+                  <ul>
+                      <li><a id="Nav_application" class="leftNav_li" href="/register">填写报名表</a></li>
+                      <li><a id="Nav_application" class="leftNav_li_selected" href="/info">已填报名信息</a></li>
+                      <li><a id="Nav_application" class="leftNav_li" href="/logout">退出登录</a></li>
+                  </ul>
+                </div>
+                <div class="rightContent">
+                        <table class="app_table">
+                            <tbody><tr>
+                                <td align="left" class="text12">
+                                    <span class="text14b">已提交的报名信息</span>
+                                    <br>以下为您已经填写的报名信息，如有错误可在左侧"填写报名表"处修改。
+                            </td></tr>
+                        </tbody></table>
+
+                        <table class="app_table">
+                            <tbody><tr align="left" bgcolor="#F0F0F0">
+                                <td colspan="2" class="text14b">个人信息</td>
+                            </tr>
+                            <tr>
+                                <td width="25%" align="right" class="text12">姓名</td>
+                                <td align="left" class="text12">{{userinfo.fullname}}</td>
+                            </tr>
+                            <tr>
+                                <td align="right" class="text12">性別</td>
+                                <td align="left" class="text12">{{userinfo.gender}}</td>
+                            </tr>
+                            <tr>
+                                <td align="right" class="text12">身份证号码</td>
+                                <td align="left" class="text12">{{userinfo.idcard}}</td>
+                            </tr>
+                            <tr>
+                                <td align="right" class="text12">手机号码</td>
+                                <td align="left" nowrap="" class="text12">
+                                    {{userinfo.mobile}}
+                                </td>
+                            </tr>
+                            <tr align="left" bgcolor="#F0F0F0">
+                                <td colspan="2" class="text14b">职业信息</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="1" width="25%" align="right" class="text12">学校全称</td>
+                                <td align="left" class="text12">{{userinfo.school}}</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="1" width="25%" align="right" class="text12">邮箱</td>
+                                <td align="left" class="text12">{{userinfo.email}}</td>
+                            </tr>
+                            <tr>
+                                <td width="25%" align="right" class="text12">职务</td>
+                                <td align="left" class="text12">{{userinfo.level}}</td>
+                            </tr>
+                            <tr>
+                                <td width="25%" align="right" class="text12">学科</td>
+                                <td align="left" class="text12">{{userinfo.subject}}</td>
+                            </tr>
+                            
+                            <tr align="left" bgcolor="#F0F0F0">
+                                <td colspan="2" class="text14b">发票信息 (请仔细填写,发票一经开出概不退换)</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="1" width="25%" align="right" class="text12">发票抬头</td>
+                                <td align="left" class="text12">{{userinfo.invoice}}</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="1" width="25%" align="right" class="text12">纳税人识别号</td>
+                                <td align="left" class="text12">{{userinfo.taxno}}</td>
+                            </tr>
+                            
+                            <tr align="left" bgcolor="#F0F0F0">
+                                <td colspan="2" class="text14b">参会信息</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="1" width="25%" align="right" class="text12">第几次参加年会</td>
+                                <td align="left" class="text12">{{userinfo.occurence}}</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="1" width="25%" align="right" class="text12">参加活动种类</td>
+                                <td align="left" class="text12">{{userinfo.activityType}}</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="1" width="25%" align="right" class="text12">同意安排午餐</td>
+                                <td align="left" class="text12">{{userinfo.isLunch}}</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="1" width="25%" align="right" class="text12">回族</td>
+                                <td align="left" class="text12">{{userinfo.isMoslem}}</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="1" width="25%" align="right" class="text12">抵达日期</td>
+                                <td align="left" class="text12">{{userinfo.dateArrival}}</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="1" width="25%" align="right" class="text12">离会日期</td>
+                                <td align="left" class="text12">{{userinfo.dateDeparture}}</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="1" width="25%" align="right" class="text12">教师工作坊期间需要接送</td>
+                                <td align="left" class="text12">{{userinfo.isShuttle}}</td>
+                            </tr>
+                            
+                                                                
+                        </tbody></table>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+        <div class="foot">
+            <div class="footer">
+                <div class="copyright">
+                    北京大学考试研究院&nbsp;版权所有&nbsp;　|　&nbsp;联系方式：ioe-te@pku.edu.cn<br>
+                </div>
+            </div>
+        </div>
+    
+
+</body></html>
